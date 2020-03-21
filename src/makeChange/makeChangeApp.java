@@ -20,6 +20,7 @@ public class makeChangeApp {
 
 			if (price == 0) {
 				sc.close();
+				System.out.print("Good-Bye!");
 				System.exit(0);
 			}
 
@@ -27,7 +28,7 @@ public class makeChangeApp {
 			amount += 0.0005;
 			if (amount < price) {
 				printSpacing();
-				System.out.println("insufficient funds...\n");
+				System.err.println("insufficient funds...\n");
 			} else if (amount == price) {
 				System.out.println("Nice doing business with you! Come again soon!");
 			} else {
@@ -109,7 +110,7 @@ public class makeChangeApp {
 				userNum = sc.nextDouble();
 				break;
 			} catch (Exception e) {
-				System.out.println(ERROR + "Invalid amount.");
+				System.err.println("Invalid amount(Must be a number).");
 				printSpacing();
 				System.out.println();
 				sc.nextLine();
