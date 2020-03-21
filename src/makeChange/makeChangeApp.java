@@ -19,6 +19,7 @@ public class makeChangeApp {
 			double price = ValidateInput("Item Amount: ");
 
 			if (price == 0) {
+				sc.close();
 				System.exit(0);
 			}
 
