@@ -72,32 +72,7 @@ public class makeChangeApp {
 				System.out.println("");
 				System.out.println("Total Change: $" + String.format("%.2f", (amount - price)));
 				printSpacing();
-				for (int i = 0; i < monies.length; i++) {
-					if (monies[i] != 0) {
-						switch (i) {
-						case 0:
-							System.out.print("Tens: " + monies[i] + " | ");
-							break;
-						case 1:
-							System.out.print("Fives: " + monies[i] + " | ");
-							break;
-						case 2:
-							System.out.print("Ones: " + monies[i] + " | ");
-							break;
-						case 3:
-							System.out.print("Quarters: " + monies[i] + " | ");
-							break;
-						case 4:
-							System.out.print("Dimes: " + monies[i] + " | ");
-							break;
-						case 5:
-							System.out.print("Nickels: " + monies[i] + " | ");
-							break;
-						case 6:
-							System.out.print("Pennies: " + monies[i] + " \n\n");
-						}
-					}
-				}
+                PrintChangeArray(monies);
 			}
 		}
 	}
@@ -118,7 +93,37 @@ public class makeChangeApp {
 		}
 		return userNum;
 	}
-	
+   
+    static void PrintChangeArray(int[] coinArray) {
+        for (int i = 0; i < coinArray.length; i++) {
+            if(coinArray[i] != 0) {
+                switch(i) {
+                    case 0:
+                        System.out.print("Tens: " + coinArray[i] + " | ");
+                        break;
+                    case 1:
+                        System.out.print("Fives: " + coinArray[i] + " | ");
+                        break;
+                    case 2:
+                        System.out.print("Ones: " + coinArray[i] + " | ");
+                        break;
+                    case 3:
+                        System.out.print("Quarters: " + coinArray[i] + " | ");
+                        break;
+                    case 4:
+                        System.out.print("Dimes: " + coinArray[i] + " | ");
+                        break;
+                    case 5:
+                        System.out.print("Nickels: " + coinArray[i] + " | ");
+                        break;
+                    case 6:
+                        System.out.print("Pennies: " + coinArray[i] + " | \n\n");
+                        break;
+                }
+            }
+        }
+    } 
+
 	static void printSpacing() {
 		System.out.println("*************************************************");
 	}
