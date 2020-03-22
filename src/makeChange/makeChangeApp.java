@@ -19,17 +19,17 @@ public class makeChangeApp {
 	public static void main(String[] args) {
 		System.out.println("WELCOME TO THE CHANGE MAKER STORE OF MAGIC!!!!!\n");
 		while (true) {
-			double price = ValidateInput("Item Amount: ") * 100;
+			double itemPrice = ValidateInput("Item Amount: ") * 100;
 
 			// Delete these lines of code if need of test case with 0 for price
-			if (price == 0) {
+			if (itemPrice == 0) {
 				sc.close();
 				System.out.print("Good-Bye!");
 				System.exit(0);
 			}
 
-			double amount = ValidateInput("Amount tendered: ") * 100;
-			makeChange(price, amount);
+			double amountTendered = ValidateInput("Amount tendered: ") * 100;
+			makeChange(itemPrice, amountTendered);
 		}
 	}
 
